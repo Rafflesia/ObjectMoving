@@ -24,7 +24,7 @@ namespace ENTITY
 
         public void drawCar(Graphics carBody, Graphics Wheel, Pen p, int move_direction, int _color, Panel panel1)
         {
-            Pen q = new Pen(Color.Red, 4);
+            Pen q = new Pen(Color.Black, 6);
             if (move_direction == 1)
             {
                 panel1.Height = 120;
@@ -39,14 +39,14 @@ namespace ENTITY
                 carBody.DrawLine(p, new Point(90, 30), new Point(170, 5));//c,d
                 carBody.DrawLine(p, new Point(170, 5), new Point(270, 5));//d,e
                 carBody.DrawLine(p, new Point(270, 5), new Point(320, 35));//e,f
-                carBody.DrawLine(p, new Point(320, 35), new Point(370, 35));//f,g
-                carBody.DrawLine(p, new Point(370, 35), new Point(370, 90));//g,h
-                carBody.DrawLine(p, new Point(370, 90), new Point(310, 90));
+                carBody.DrawLine(p, new Point(320, 35), new Point(380, 35));//f,g
+                carBody.DrawLine(p, new Point(380, 35), new Point(380, 90));//g,h
+                carBody.DrawLine(p, new Point(380, 90), new Point(310, 90));
                 carBody.DrawLine(p, new Point(118, 90), new Point(10, 90));//a,b
 
 
 
-                carBody.DrawLine(p, new Point(187, 90), new Point(260, 90));
+                carBody.DrawLine(p, new Point(183, 90), new Point(260, 90));
 
                 //car glass
                 carBody.DrawLine(p, new Point(170, 5), new Point(170, 35));
@@ -55,9 +55,14 @@ namespace ENTITY
                // p = new Pen(Color.RosyBrown, 10);
 
                 // carBody.DrawRectangle(p, 177, 5, 83, 30);
-                carBody.DrawLine(p, new Point(177, 5), new Point(177, 35));
-                carBody.DrawLine(p, new Point(176, 33), new Point(260, 33));
-                carBody.DrawLine(p, new Point(260, 5), new Point(260, 35));
+                carBody.FillRectangle(Brushes.Red, 177, 5, 83, 30);
+                carBody.FillRectangle(Brushes.Red , 20, 50, 183, 10);
+                carBody.FillRectangle(Brushes.Red, 360, 37, 10, 52);
+                carBody.FillRectangle(Brushes.Red, 345, 37, 10, 52);
+
+                //carBody.DrawLine(p, new Point(177, 5), new Point(177, 35));
+                //carBody.DrawLine(p, new Point(176, 33), new Point(260, 33));
+                //carBody.DrawLine(p, new Point(260, 5), new Point(260, 35));
 
                 p = new Pen(Color.Red, 5);
                 carBody.DrawLine(p, new Point(267, 5), new Point(267, 35));
@@ -70,13 +75,13 @@ namespace ENTITY
                 carBody.DrawLine(p, new Point(6, 90), new Point(6, 77));
 
                 //car headlight
-                p = new Pen(Color.Orange, 15);
+                p = new Pen(Color.Yellow, 15);
 
                 Wheel.DrawEllipse(p, 18, 40, 13, 13);
 
                 //  carBody wheel
 
-                p = new Pen(Color.Navy, 20);
+                p = new Pen(Color.Black, 10);
 
                 Wheel.DrawEllipse(p, 125, 65, 50, 50);
                 Wheel.DrawEllipse(p, 260, 65, 50, 50);
@@ -84,21 +89,21 @@ namespace ENTITY
 
                 if (_color == 0)
                 {
-                    Wheel.DrawLine(q, new Point(135, 90), new Point(165, 90));
+                    Wheel.DrawLine(q, new Point(130, 90), new Point(170, 90));
                 }
                 else if ((_color % 2) == 1)
-                    Wheel.DrawLine(q, new Point(135, 90), new Point(165, 90));
+                    Wheel.DrawLine(q, new Point(130, 90), new Point(170, 90));
                 else
-                    Wheel.DrawLine(q, new Point(150, 75), new Point(150, 105));
+                    Wheel.DrawLine(q, new Point(150, 70), new Point(150, 110));
                 //2nd wheel moving 
                 if (_color == 0)
                 {
-                    Wheel.DrawLine(q, new Point(270, 90), new Point(300, 90));
+                    Wheel.DrawLine(q, new Point(265, 90), new Point(305, 90));
                 }
                 else if ((_color % 2) == 1)
-                    Wheel.DrawLine(q, new Point(270, 90), new Point(300, 90));
+                    Wheel.DrawLine(q, new Point(265, 90), new Point(305, 90));
                 else
-                    Wheel.DrawLine(q, new Point(285, 75), new Point(285, 105));
+                    Wheel.DrawLine(q, new Point(285, 70), new Point(285, 110));
 
 
             }
@@ -132,24 +137,29 @@ namespace ENTITY
 
                 carBody.DrawLine(p, new Point(157, 5), new Point(157, 35));
                 carBody.DrawLine(p, new Point(156, 33), new Point(241, 33));
+                
                 carBody.DrawLine(p, new Point(239, 5), new Point(239, 35));
                 carBody.DrawLine(p, new Point(246, 5), new Point(246, 35));
                 carBody.DrawLine(p, new Point(246, 33), new Point(308, 33));
+                
+                carBody.FillRectangle(Brushes.Red, 155, 5, 83, 30);
 
-
+                carBody.FillRectangle(Brushes.Red, 210, 50, 183, 10);
+                carBody.FillRectangle(Brushes.Red, 30, 32, 10, 55);
+                carBody.FillRectangle(Brushes.Red, 45, 32, 10, 55);
 
                 //car shild
                 p = new Pen(Color.RosyBrown, 19);
                 carBody.DrawLine(p, new Point(380, 90), new Point(380, 77));
 
                 //car headlight
-                p = new Pen(Color.Orange, 15);
+                p = new Pen(Color.Yellow, 15);
 
                 Wheel.DrawEllipse(p, 380, 40, 13, 13);
 
                 //  carBody wheel
 
-                p = new Pen(Color.Navy, 20);
+                p = new Pen(Color.Black, 10);
 
                 Wheel.DrawEllipse(p, 125, 65, 50, 50);
                 Wheel.DrawEllipse(p, 260, 65, 50, 50);
@@ -157,21 +167,21 @@ namespace ENTITY
 
                 if (_color == 0)
                 {
-                    Wheel.DrawLine(q, new Point(135, 90), new Point(165, 90));
+                    Wheel.DrawLine(q, new Point(130, 90), new Point(170, 90));
                 }
                 else if ((_color % 2) == 1)
-                    Wheel.DrawLine(q, new Point(135, 90), new Point(165, 90));
+                    Wheel.DrawLine(q, new Point(130, 90), new Point(170, 90));
                 else
-                    Wheel.DrawLine(q, new Point(150, 75), new Point(150, 105));
+                    Wheel.DrawLine(q, new Point(150, 70), new Point(150, 110));
                 //2nd wheel moving 
                 if (_color == 0)
                 {
-                    Wheel.DrawLine(q, new Point(270, 90), new Point(300, 90));
+                    Wheel.DrawLine(q, new Point(265, 90), new Point(305, 90));
                 }
                 else if ((_color % 2) == 1)
-                    Wheel.DrawLine(q, new Point(270, 90), new Point(300, 90));
+                    Wheel.DrawLine(q, new Point(265, 90), new Point(305, 90));
                 else
-                    Wheel.DrawLine(q, new Point(285, 75), new Point(285, 105));
+                    Wheel.DrawLine(q, new Point(285, 70), new Point(285, 110));
             }
 
             else if (move_direction == 3)

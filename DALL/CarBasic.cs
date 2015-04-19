@@ -15,7 +15,7 @@ namespace DALL
         {
             try {
                 onjE.ESpeed = s;
-                StreamWriter write = new StreamWriter(@"F:\rafflesia\New folder (2)\car on road\ObjectMoving(1)\ObjectMoving\speed.txt");
+                StreamWriter write = new StreamWriter(@"E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\speed.txt");
                 write.WriteLine(onjE.ESpeed);
                 write.Close();
                 return true;
@@ -31,7 +31,7 @@ namespace DALL
         public int getSpeed()
         {
 
-            StreamReader read = new StreamReader(@"F:\rafflesia\New folder (2)\car on road\ObjectMoving(1)\ObjectMoving\speed.txt");
+            StreamReader read = new StreamReader(@"E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\speed.txt");
             onjE.ESpeed=Convert.ToInt32(read.ReadLine());
             return onjE.ESpeed;
         }
@@ -41,7 +41,7 @@ namespace DALL
         {
             Cars DrawCar = new Cars();
 
-            StreamReader read = new StreamReader(@"F:\rafflesia\New folder (2)\car on road\ObjectMoving(1)\ObjectMoving\DrawCar.txt");
+            StreamReader read = new StreamReader(@"E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\DrawCar.txt");
 
             try{
                 DrawCar.carstyle=read.ReadLine();
@@ -67,7 +67,7 @@ namespace DALL
         {
             Cars PicCar = new Cars();
 
-            StreamReader read = new StreamReader(@"F:\rafflesia\New folder (2)\car on road\ObjectMoving(1)\ObjectMoving\PicCar.txt");
+            StreamReader read = new StreamReader(@"E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\PicCar.txt");
 
             try
             {

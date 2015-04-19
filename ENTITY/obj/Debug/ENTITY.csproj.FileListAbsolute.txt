@@ -38,3 +38,8 @@ E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\ENTITY\bin\
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\ENTITY\obj\Debug\ENTITY.dll
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\ENTITY\obj\Debug\ENTITY.pdb
+E:\recent importent\NEW\ObjectMoving\ENTITY\bin\Debug\ENTITY.dll
+E:\recent importent\NEW\ObjectMoving\ENTITY\bin\Debug\ENTITY.pdb
+E:\recent importent\NEW\ObjectMoving\ENTITY\obj\Debug\ENTITY.dll
+E:\recent importent\NEW\ObjectMoving\ENTITY\obj\Debug\ENTITY.pdb
+E:\recent importent\NEW\ObjectMoving\ENTITY\obj\Debug\ENTITY.csprojResolveAssemblyReference.cache

@@ -84,3 +84,21 @@ E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debu
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.csprojResolveAssemblyReference.cache
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.dll
 E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.pdb
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\BO.dll
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\BO.pdb
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\DALL.dll
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\ENTITY.dll
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\DALL.pdb
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\bin\Debug\ENTITY.pdb
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.csprojResolveAssemblyReference.cache
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.dll
+F:\vstudioProject\car on road\ObjectMoving(1)\ObjectMoving\BO\obj\Debug\BO.pdb
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\BO.dll
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\BO.pdb
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\DALL.dll
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\ENTITY.dll
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\DALL.pdb
+E:\recent importent\NEW\ObjectMoving\BO\bin\Debug\ENTITY.pdb
+E:\recent importent\NEW\ObjectMoving\BO\obj\Debug\BO.csprojResolveAssemblyReference.cache
+E:\recent importent\NEW\ObjectMoving\BO\obj\Debug\BO.dll
+E:\recent importent\NEW\ObjectMoving\BO\obj\Debug\BO.pdb

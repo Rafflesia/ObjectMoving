@@ -11,6 +11,10 @@ namespace BO
     {
         //int Speed;
         CarBasic objD = new CarBasic();
+        public enum Position
+        {
+            Left, Right, Up, Down, Stop
+        }
 
         public int getSpeed()
         {
@@ -33,10 +37,10 @@ namespace BO
         {
             return objD.getPictureInfo();
         }
-/*
-        public void timer(int _color, global::ObjectMoving.DrawCar.Position objPosition, int X, int Y, int Uspeed)
+
+        public Direction ChangePosition(int _color, Position objPosition, int X, int Y, int Uspeed)
         {
-            _color += 1;
+            _color += 2;
 
             if (objPosition == Position.Right)
             {
@@ -45,11 +49,12 @@ namespace BO
                 if (X >= 1000)
                 {
                     objPosition = Position.Stop;
+                    //_color = 0;
                 }
                 else if ((X >= 350) && (X <= 370) && (Y >= 175))
                 {
                     objPosition = Position.Stop;
-
+                    //_color = 0;
                 }
                 else if ((X >= 370) && (Y >= 175))
                 {
@@ -69,16 +74,18 @@ namespace BO
                 if (X <= 0)
                 {
                     objPosition = Position.Stop;
+                    //_color = 0;
                 }
                 else if ((X >= 350) && (X <= 370) && (Y >= 175))
                 {
                     objPosition = Position.Stop;
-
+                    //_color = 0;
                 }
                 else if ((X <= 470) && (Y <= 80))
                 {
 
                     objPosition = Position.Stop;
+                    //_color = 0;
                 }
                 else if ((Y > 300) && (X <= 470))
                 {
@@ -93,10 +100,12 @@ namespace BO
                 if (Y <= 0)
                 {
                     objPosition = Position.Stop;
+                   // _color = 0;
                 }
                 else if ((Y <= 67) || (Y >= 350))
                 {
                     objPosition = Position.Stop;
+                   // _color = 0;
                 }
 
             }
@@ -109,6 +118,7 @@ namespace BO
                 if (Y >= 400)
                 {
                     objPosition = Position.Stop;
+                   // _color = 0;
                 }
 
             }
@@ -117,11 +127,11 @@ namespace BO
             {
                 X = X;
                 Y = Y;
-                _color = 0;
+                _color = 1;
             }
-
-            Invalidate();
+            Direction newPosition = new Direction(X, Y, objPosition,_color);
+            return newPosition;
         }
- * */
+
     }
 }

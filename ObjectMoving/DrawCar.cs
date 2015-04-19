@@ -20,29 +20,30 @@ namespace ObjectMoving
         Pen p;
         Brush b;
         Pen q = new Pen(Color.Red, 4);
-        enum Position
-        {
-            Left, Right, Up, Down, Stop
-        }
+        
 
         private int X;
         private int Y;
-        private Position objPosition;
+        private CarBO.Position objPosition;
         private int _color = 0;
         private int Uspeed;
         int move_direction = 1;
 
-
+        SoundPlayer My_JukeBox = new SoundPlayer(@"E:\recent importent\Its New\car on road\ObjectMoving(1)\ObjectMoving\ObjectMoving\Resources\engine.wav");
+          
         public DrawCar()
         {
             InitializeComponent();
 
             X = 7;
             Y = 350;
-            objPosition = Position.Left;
+            objPosition = CarBO.Position.Left;
 
             Uspeed = objE.ESpeed = objB.getSpeed();
             this.speedshow.Text = Convert.ToString(Uspeed) + " ms^-1";
+            //SoundPlayer My_JukeBox = new SoundPlayer(@"E:\recent importent\NEW\ObjectMoving\ObjectMoving\Resources\engine.wav");
+           // My_JukeBox.Play();
+           // My_JukeBox.PlayLooping();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -67,90 +68,11 @@ namespace ObjectMoving
 
 
             _color += 1;
-            //objB.timer(_color, objPosition, X, Y, Uspeed);
-            
-             if (objPosition == Position.Right)
-             {
-               
-                 X += Uspeed;
-                 if (X >= 1000)
-                 {
-                     objPosition = Position.Stop;
-                 }
-                 else if ((X >= 350)&&(X<=370)&&(Y>=175))
-                 {
-                     objPosition = Position.Stop;
-
-                 }
-                 else if ((X >= 370) && (Y >= 175))
-                 {
-                     Y = 350;
-                 }
-                 else if ((X >= 350) && (Y <= 67))
-                 {
-                     Y = 75;
-
-                 }
-              }
-             else if (objPosition == Position.Left)
-             {
-               
-                 X -= Uspeed;
-               
-                 if (X <= 0)
-                 {
-                     objPosition = Position.Stop;
-                 }
-                 else if ((X >= 350) && (X <= 370) && (Y >= 175))
-                 {
-                     objPosition = Position.Stop;
-
-                 }
-                 else if ((X <= 470) && (Y <= 80))
-                 {
-
-                     objPosition = Position.Stop;
-                 }
-                 else if ((Y > 300) && (X <= 470))
-                 {
-                     Y = 350;
-                 }
-              }
-             else if (objPosition == Position.Up)
-             {
-                 X = 500;
-                 Y -= Uspeed;
-
-                 if (Y <= 0)
-                 {
-                     objPosition = Position.Stop;
-                 }
-                 else if ((Y <=67)||(Y>=350))
-                 {
-                     objPosition = Position.Stop;
-                 }
-               
-             }
-            
-             else if (objPosition == Position.Down)
-             {
-                 X = 500;
-                 Y += Uspeed;
-
-                 if (Y >=400)
-                 {
-                     objPosition = Position.Stop;
-                 }
-
-             }
-
-             if (objPosition == Position.Stop)
-             {
-                 X = X;
-                 Y = Y;
-                 _color = 0;
-             }
-
+         Direction dir=   objB.ChangePosition(_color, objPosition, X, Y, Uspeed);
+         X = dir.getX();
+         Y = dir.getY();
+         _color = dir.getColor();
+         objPosition = dir.getObjPosition();
              Invalidate();
         }
 
@@ -159,32 +81,39 @@ namespace ObjectMoving
             if (e.KeyCode == Keys.Left)
             {
                 move_direction = 1;
-                objPosition = Position.Left;
+                objPosition = CarBO.Position.Left;
+                My_JukeBox.Play();
+                
             }
             else if (e.KeyCode == Keys.Right)
             {
-                objPosition = Position.Right;
-                move_direction = 2; // will be used to reverse the direction of car
+                objPosition = CarBO.Position.Right;
+                move_direction = 2;
+                My_JukeBox.Play();// will be used to reverse the direction of car
             }
             else if (e.KeyCode == Keys.Space)
             {
-                objPosition = Position.Stop;
+                objPosition = CarBO.Position.Stop;
                 //q.Dispose();
                 timerColour.Stop();
+                My_JukeBox.Stop();
+                _color = 0;
 
             }
             else if (e.KeyCode == Keys.Up)
             {
-                objPosition = Position.Up;
+                objPosition = CarBO.Position.Up;
 
                 move_direction = 3;
+                My_JukeBox.Play();
 
             }
             else if (e.KeyCode == Keys.Down)
             {
-                objPosition = Position.Down;
+                objPosition = CarBO.Position.Down;
 
                 move_direction = 4;
+                My_JukeBox.Play(); 
 
             }
         }
